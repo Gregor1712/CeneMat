@@ -15,6 +15,9 @@ dist/
 # PyCharm
 .idea/
 
+# Stiahnuté cenníky výrobcov (lokálne dáta, necommitujú sa)
+/Cenniky/
+
 # Lokálne nastavenia a tajomstvá
 .env
 
