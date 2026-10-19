@@ -1,0 +1,23 @@
+# Virtuálne prostredie
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+
+# PyCharm
+.idea/
+
+# Lokálne nastavenia a tajomstvá
+.env
+
+# OS
+Thumbs.db
+.DS_Store
