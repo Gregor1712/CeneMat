@@ -1,0 +1,32 @@
+# Nastavenie Azure AI Document Intelligence pre experimenty (experiments/azure_di_skuska.py).
+# Kľúče sem nepatria. Prihlásenie je cez Entra ID, alebo si skript kľúč vypýta cez `az` pri spustení.
+
+# Profil, ktorý sa použije, keď sa pri spustení nezadá --profil
+aktivny = "free" # standard
+
+[profily.free]
+popis = "masha-documentintelligence, F0: 500 strán mesačne zadarmo"
+endpoint = "https://masha-documentintelligence.cognitiveservices.azure.com/"
+predplatne = "KROS DEVEL SUBSCRIPTION"
+skupina = "masha-shared-rsg"
+prostriedok = "masha-documentintelligence"
+# entra   = Entra ID (az login), treba rolu Cognitive Services User na prostriedku
+# az-kluc = kľúč sa pri spustení vypýta cez Azure CLI (stačí rola Contributor), nikam sa neukladá
+# env     = kľúč z premennej prostredia AZURE_DI_KEY
+prihlasenie = "az-kluc"
+# F0 spracuje z jednej požiadavky iba prvé 2 strany a súbor do 4 MB
+max_stran_na_volanie = 2
+max_velkost_mb = 4
+cena_za_1000_stran_eur = 0.0
+
+[profily.standard]
+popis = "kros-dev-documentintelligence, S0: zdieľaný, platí sa za každú stranu"
+endpoint = "https://kros-dev-documentintelligence.cognitiveservices.azure.com/"
+predplatne = "KROS DEVEL SUBSCRIPTION"
+skupina = "kros-shared-rsg"
+prostriedok = "kros-dev-documentintelligence"
+prihlasenie = "az-kluc"
+max_stran_na_volanie = 2000
+max_velkost_mb = 500
+# Cenník Azure, West Europe, „S0 Pre-built Pages" (Layout sa účtuje ako prebuilt)
+cena_za_1000_stran_eur = 8.80
