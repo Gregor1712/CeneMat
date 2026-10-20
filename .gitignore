@@ -15,8 +15,17 @@ dist/
 # PyCharm
 .idea/
 
+# Claude Code – osobné nastavenia (zdieľané sú v .claude/settings.json)
+.claude/settings.local.json
+
 # Stiahnuté cenníky výrobcov (lokálne dáta, necommitujú sa)
 /Cenniky/
+
+# Výstupy experimentov (odvodené z cenníkov)
+experiments/vystup/
+
+# Náčrty z brainstormingu s Claude (lokálny server)
+.superpowers/
 
 # Lokálne nastavenia a tajomstvá
 .env
